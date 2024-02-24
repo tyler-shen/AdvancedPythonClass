@@ -1,24 +1,26 @@
-def sqrt_binary_search(number, epsilon=1e-10):
+import math
+
+def sqrt_binary_search(number):
     if number < 0:
-        raise ValueError("Cannot calculate square root of a negative number.")
+        return "Invalid number"
 
     if number == 0 or number == 1:
-        return round(number, 2)
+        return "{:.2f}".format(number)
 
-    low, high = 0, number
-    while high - low > epsilon:
+    # use binary search here
+    low = 0
+    high = number
+    while high - low > 0.000001: # how accurate you want
         mid = (low + high) / 2
-        mid_squared = mid * mid
+        mid_sq = mid * mid
 
-        if mid_squared < number:
-            low = mid
-        else:
+        if mid_sq > number:
             high = mid
+        else:
+            low = mid
 
-    result = low + (high - low) / 2
-    return round(result, 2)
+    return "{:.2f}".format(mid)
 
-# Example usage:
-number_to_sqrt = 25
-result = sqrt_binary_search(number_to_sqrt)
-print(f"The square root of {number_to_sqrt} is approximately {result}")
+num = 5
+print(sqrt_binary_search(num))
+print("{:.2f}".format(math.sqrt(num)))
