@@ -26,8 +26,8 @@ class Swimmer(Animal):
 
 class Snake(Crawler, Swimmer):
   def __init__(self, name, size, legs):
-    super().__init__(name, size)
-    self.legs = legs
+    super().__init__(name, legs)
+    self.size = size
 
 rattle_snake = Snake("Rattle Snake", 10, 0)
 rattle_snake.crawl()
