@@ -6,6 +6,8 @@ decode = []
 for ch in text:
   if ch == ".":
     decode.append(ch)
+#  elif ch == " ":
+#    decode.append(ch)
   else:
     num = ord(ch)
     if num > ord('x'):
