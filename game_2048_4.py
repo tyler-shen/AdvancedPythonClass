@@ -92,8 +92,6 @@ class Game2048:
             # Do collapse on the row, reverse the rows so it's equivalent to move to the right
             row.reverse()
             out_row = self.collapse(tiles=row)
-            if out_row != row:
-                affected = True
             out_row.reverse()
 
             # Put back the row to the game board
@@ -110,8 +108,6 @@ class Game2048:
 
             # Do collapse on the column
             out_col = self.collapse(tiles=col)
-            if out_col != col:
-                affected = True
 
             # Put back the column to the game board
             for row_idx in range(len(self.board)):
@@ -129,8 +125,6 @@ class Game2048:
             # Do collapse on the column
             col.reverse()
             out_col = self.collapse(tiles=col)
-            if out_col != col:
-                affected = True
             out_col.reverse()
 
             # Put back the column to the game board
