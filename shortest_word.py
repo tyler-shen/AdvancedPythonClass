@@ -2,9 +2,9 @@
 def shortest_word(words):
 	# first, initialize the result (randomly picked from set)
 	# second, you need to loop through the set, and compare the word with the result
-	# 	compare with lenght, if shorter, then replace the result
-	#												 if longer, then don't do anythin, just continue the loop (this can skipped)
-	#												 if equal, then compare the word with result using <, or >, then replace the result if less
+	# compare with lenght, if shorter, then replace the result
+	# if longer, then don't do anythin, just continue the loop (this can skipped)
+	# if equal, then compare the word with result using <, or >, then replace the result if less
 	# after the loop, the result is the answer
 	result = words.pop()
 	for word in words:
