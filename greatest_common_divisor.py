@@ -14,17 +14,17 @@ def greatest_common_divisor(number1, number2):
 	# return result
 
 	# algorithm from big to smaller
-	# num = min(number1, number2)
-	# while num >= 1:
-	# 	if number1 % num == 0 and number2 % num == 0:
-	# 		return num
-	# 	num -= 1
-	# return num
-
-	highest = min(number1, number2)
-	for num in range(highest, 0, -1):
+	num = min(number1, number2)
+	while num >= 1:
 		if number1 % num == 0 and number2 % num == 0:
 			return num
+		num -= 1
+	return num
+
+	# highest = min(number1, number2)
+	# for num in range(highest, 0, -1):
+	# 	if number1 % num == 0 and number2 % num == 0:
+	# 		return num
 
 import random
 import math
