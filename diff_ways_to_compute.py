@@ -16,14 +16,14 @@ def diffWaysToCompute(expression):
             right_result = diffWaysToCompute(right)
 
             # combine the case
-            for i in left_result:
-                for j in right_result:
+            for j in left_result:
+                for k in right_result:
                     if oper == "+":
-                        result.append(i + j)
+                        result.append(j + k)
                     elif oper == "-":
-                        result.append(i - j)
+                        result.append(j - k)
                     elif oper == "*":
-                        result.append(i * j)
+                        result.append(j * k)
 
     return result
 
