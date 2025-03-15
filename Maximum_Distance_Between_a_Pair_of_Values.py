@@ -4,7 +4,6 @@ def maxDistance_basic(nums1, nums2):
         for j in range(i, len(nums2)):
             if nums1[i] <= nums2[j]:
                 result = max(result, j - i)
-                break
     return result
 
 def maxDistance_adv(nums1, nums2):
