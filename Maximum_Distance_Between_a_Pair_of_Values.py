@@ -7,6 +7,8 @@ def maxDistance_basic(nums1, nums2):
     return result
 
 def maxDistance_adv(nums1, nums2):
+    # use for loop to go through nums1
+    # and use binary search to quickly find the right index in nums2
     result = 0
     for i in range(len(nums1)):
         left = i
